@@ -27,13 +27,7 @@ h2o.no_progress()  # Turn off progress bars for notebook readability
 Using a cleaned dataset for moneyball data analysis.  Outliers (at bats < 100) have been removed.
 
 ```{r}
-
-docker_data_path <- "/home/h2o/data/automl/powerplant_output.csv"
-if (file.exists(docker_data_path)) {
-  data_path <- docker_data_path
-} else {
-  data_path <- "https://pennstateoffice365-my.sharepoint.com/personal/jmg7446_psu_edu/_layouts/15/download.aspx?UniqueId=c13f441f%2D6594%2D4d19%2Db9b6%2Da46174dfb736"
-}
+data_path <- "https://github.com/jgrissel/moneyball_cs/blob/master/mball.csv"
 
 # Load data into H2O
 df <- h2o.importFile(data_path)
